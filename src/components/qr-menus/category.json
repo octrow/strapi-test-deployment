@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_qr_menus_categories",
+  "info": {
+    "displayName": "Category",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "minLength": 2,
+      "maxLength": 50
+    },
+    "slug": {
+      "type": "string",
+      "unique": false,
+      "minLength": 2,
+      "maxLength": 50,
+      "required": true,
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    }
+  }
+}

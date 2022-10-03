@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "qr_menus",
+  "info": {
+    "singularName": "qr-menu",
+    "pluralName": "qr-menus",
+    "displayName": "QR Menu",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "maxLength": 50,
+      "minLength": 2
+    },
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "category": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "qr-menus.category",
+      "required": true,
+      "min": 1
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "regex": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "unique": false,
+      "minLength": 2,
+      "maxLength": 50,
+      "required": true
+    }
+  }
+}
